@@ -22,7 +22,7 @@
 # along with PhpVagrantMulti.  If not, see <http://www.gnu.org/licenses/>.
 ##
 
-%w{build-essential php5-dev unzip php-pear memcached}.each do |pkg|
+%w{build-essential php5-dev unzip php-pear memcached ruby-dev}.each do |pkg|
   package pkg do
     action :install
   end
