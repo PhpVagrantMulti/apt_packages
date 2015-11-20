@@ -1,6 +1,6 @@
 ##
 # default.rb
-# Installs selected packages
+# Default attributes
 # Cookbook Name:: apt_packages
 # Recipe:: default
 # AUTHORS::   Seth Griffin <griffinseth@yahoo.com>
@@ -22,9 +22,4 @@
 # along with PhpVagrantMulti.  If not, see <http://www.gnu.org/licenses/>.
 ##
 
-node["aptPackages"]["packages"].each do |pkg|
-  package pkg do
-    action :install
-  end
-end
-
+default["aptPackages"]["packages"]  = []
