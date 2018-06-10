@@ -28,3 +28,12 @@ node["aptPackages"]["packages"].each do |pkg|
   end
 end
 
+if node["aptPackages"]["use_elasticsearch"] == true
+    cookbook_file "elasticsearch.yml" do
+        path "/etc/elasticsearch/elasticsearch.yml"
+        action :create
+        mode '0644'
+        owner 'root'
+        group 'root'
+    end
+end
