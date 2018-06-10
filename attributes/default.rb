@@ -23,3 +23,4 @@
 ##
 
 default["aptPackages"]["packages"]  = []
+default["aptPackages"]["use_elasticsearch"] = false
